@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disclosing Reality | Reflection Toolkit</title>
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Simple fade-in animation for the active role panel */
+    @keyframes fadeInSoft {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-soft {
+      animation: fadeInSoft 220ms ease-out;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 font-sans pb-20">
+
+  <!-- Header -->
+  <header class="bg-indigo-900 text-white py-10 px-6 shadow-md">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-3xl md:text-4xl font-bold mb-3 flex items-center gap-3">
+        <!-- BookOpen-like icon -->
+        <svg class="w-8 h-8 text-indigo-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+          <path d="M4 4.5A2.5 2.5 0 0 1 6.5 7H20" />
+          <path d="M6.5 7A2.5 2.5 0 0 0 4 9.5v10A2.5 2.5 0 0 1 6.5 17" />
+          <path d="M20 7v10" />
+        </svg>
+        <span>Disclosing Reality</span>
+      </h1>
+      <p class="text-lg md:text-xl text-indigo-200">
+        The Hierarchy of Integrated Thought &amp; Professional Application
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 py-8 space-y-10">
+
+    <!-- Core Concepts Summary -->
+    <section class="bg-white rounded-xl shadow-sm p-7 md:p-8 border border-slate-200">
+      <h2 class="text-xl md:text-2xl font-bold mb-4 text-indigo-900 flex items-center gap-2">
+        <!-- Info icon -->
+        <svg class="w-5 h-5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="16" x2="12" y2="12" />
+          <line x1="12" y1="8" x2="12.01" y2="8" />
+        </svg>
+        <span>Core Concepts Summary</span>
+      </h2>
+      <div class="space-y-4 text-base md:text-lg text-slate-700 leading-relaxed">
+        <p>
+          Based on our featured audio deep-dive, we are challenging the modern assumption that isolated, abstract science (like quantum physics) is the highest form of human intellect.
+        </p>
+        <p>
+          Instead, the podcast argues that <strong>Everyday Integrated Thinking</strong>&mdash;such as pruning a rose bush&mdash;is a higher, more complex form of thought. Why? Because the gardener must simultaneously navigate physical, biological, aesthetic, and social realities without separating them.
+        </p>
+        <p>
+          True professional excellence isn't about imposing absolute willpower on a blank canvas. It is about <strong>Disclosing Systems</strong>: unlocking the hidden potential of reality by observing its rules, respecting its history, and asking three vital questions:
+          <em>What is this? How does it work? And how do I care for it so it becomes what it is meant to be?</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- Explore Professional Applications -->
+    <section>
+      <h2 class="text-xl md:text-2xl font-bold mb-4 text-indigo-900">Explore Professional Applications</h2>
+      <p class="mb-6 text-slate-600 text-sm md:text-base">
+        Select a vocational role below to see how these heavy-lifting philosophical concepts translate into daily professional practice.
+      </p>
+
+      <!-- Role cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-7" id="roleCards">
+        <!-- Cards injected by JS -->
+      </div>
+
+      <!-- Active role detail panel -->
+      <div id="roleDetailContainer" class="hidden">
+        <div class="bg-indigo-900 text-white rounded-xl p-7 md:p-8 shadow-lg animate-fade-soft" id="roleDetail">
+          <!-- Filled dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Reflection Synthesis -->
+    <section class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+      <div class="bg-indigo-50 border-b border-indigo-100 p-6">
+        <h2 class="text-xl md:text-2xl font-bold text-indigo-900 flex items-center gap-2">
+          <!-- Clipboard icon -->
+          <svg class="w-5 h-5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+            <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+          </svg>
+          <span>Reflection Synthesis (Required Assignment)</span>
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm md:text-base">
+          Based on the summary and the applications above, take a moment to integrate this into your own perspective.
+        </p>
+      </div>
+
+      <div class="p-7 md:p-8">
+        <label class="block text-base md:text-lg font-semibold text-slate-800 mb-4">
+          Write a short paragraph answering the following question:
+          <br />
+          <span class="text-indigo-600">
+            "How would this framework benefit you? Or others you serve? Or your profession/vocation in general?"
+          </span>
+        </label>
+
+        <textarea
+          id="reflectionText"
+          class="w-full h-40 md:h-48 p-4 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-shadow resize-y text-slate-700 text-base md:text-lg leading-relaxed"
+          placeholder="Start typing your reflection here..."
+        ></textarea>
+
+        <div class="mt-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <button
+            id="toggleHints"
+            type="button"
+            class="text-indigo-600 font-medium hover:text-indigo-800 flex items-center gap-1 transition-colors"
+          >
+            <span>Stuck? View Model Answers</span>
+          </button>
+
+          <div class="flex items-center gap-3 w-full sm:w-auto">
+            <span id="copyStatus" class="text-xs md:text-sm font-medium text-green-600"></span>
+            <button
+              id="copyButton"
+              type="button"
+              class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 text-sm md:text-base"
+            >
+              <!-- Clipboard icon -->
+              <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+              </svg>
+              <span>Copy My Answer</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Model answers / hints -->
+        <div id="hintsPanel" class="mt-6 bg-amber-50 border border-amber-200 rounded-lg p-6 space-y-4 hidden">
+          <h4 class="font-bold text-amber-900 flex items-center gap-2 text-sm md:text-base">
+            <!-- Lightbulb icon -->
+            <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 18h6" />
+              <path d="M10 22h4" />
+              <path d="M12 2a7 7 0 0 0-4 12.75V17h8v-2.25A7 7 0 0 0 12 2Z" />
+            </svg>
+            <span>Sample / Model Responses</span>
+          </h4>
+          <p class="text-xs md:text-sm text-amber-800">
+            If you are having trouble getting started, review how these professionals answered the question:
+          </p>
+
+          <div class="space-y-4">
+            <div class="bg-white p-4 rounded border border-amber-100 shadow-sm">
+              <span class="text-[0.65rem] md:text-xs font-bold uppercase tracking-wider text-amber-600 mb-1 block">
+                Healthcare Professional
+              </span>
+              <p class="text-slate-700 italic text-sm">
+                "This framework benefits my work in nursing because it reminds me not to reduce a patient strictly to their biological symptoms (scientific abstraction). By asking 'How do I care for this person so they become what they are meant to be?', I integrate the biological, psychological, and social realities of their healing process, leading to better, more holistic patient care."
+              </p>
+            </div>
+
+            <div class="bg-white p-4 rounded border border-amber-100 shadow-sm">
+              <span class="text-[0.65rem] md:text-xs font-bold uppercase tracking-wider text-amber-600 mb-1 block">
+                Creative Designer
+              </span>
+              <p class="text-slate-700 italic text-sm">
+                "As a designer, I often fall into the trap of thinking absolute freedom is the goal. Understanding that true creativity is 'disclosing' potential by respecting boundaries (like the Wright brothers obeying gravity) helps me embrace the constraints of a client's budget and brand history. It shifts my mindset from being a dictator of aesthetics to a cultivator of meaning."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Submission Instructions -->
+    <section class="bg-slate-800 text-white rounded-xl p-7 md:p-8 shadow-md">
+      <h2 class="text-xl md:text-2xl font-bold mb-4 flex items-center gap-2 text-indigo-300">
+        <!-- GraduationCap icon -->
+        <svg class="w-6 h-6 md:w-7 md:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 10L12 2 2 10l10 8 10-8Z" />
+          <path d="M6 12v5c3 1.5 9 1.5 12 0v-5" />
+        </svg>
+        <span>Submit for Tutor Feedback</span>
+      </h2>
+      <p class="text-slate-300 mb-6 text-sm md:text-base md:text-lg">
+        Your reflection is not just busywork&mdash;it is part of an ongoing dialogue. By submitting your paragraph to Google Classroom, your human tutor will review your specific application of "Disclosing Systems" and provide tailored feedback on how you are integrating these concepts.
+      </p>
+
+      <div class="bg-slate-700 rounded-lg p-6 border border-slate-600 space-y-4 text-sm md:text-base">
+        <!-- Step 1 -->
+        <div class="flex items-start gap-4">
+          <div class="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0 mt-1">1</div>
+          <div>
+            <h4 class="font-bold text-base md:text-lg">Copy your response</h4>
+            <p class="text-slate-300">Use the "Copy My Answer" button in the reflection section above.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex items-start gap-4">
+          <div class="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0 mt-1">2</div>
+          <div class="w-full">
+            <h4 class="font-bold text-base md:text-lg">Access Google Classroom</h4>
+            <p class="text-slate-300 mb-3">
+              Join the course environment using the access code:
+              <strong class="bg-slate-800 px-2 py-1 rounded text-white">2ndxc6c</strong>
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://classroom.google.com/c/NjgzOTkwNTEyNjla?cjc=2ndxc6c"
+                target="_blank"
+                rel="noreferrer"
+                class="bg-slate-600 hover:bg-slate-500 text-white px-4 py-2 rounded transition-colors text-xs md:text-sm flex items-center justify-center gap-2"
+              >
+                <!-- External link icon -->
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+                <span>Class Join Link</span>
+              </a>
+
+              <a
+                href="https://classroom.google.com/c/NjgzOTkwNTEyNjla/a/ODU3Njg0MDYyNjY2/details"
+                target="_blank"
+                rel="noreferrer"
+                class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded transition-colors text-xs md:text-sm flex items-center justify-center gap-2"
+              >
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+                <span>Direct Assignment Link</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex items-start gap-4">
+          <div class="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0 mt-1">3</div>
+          <div>
+            <h4 class="font-bold text-base md:text-lg">Paste and submit</h4>
+            <p class="text-slate-300">
+              Paste your clipboard contents into the assignment submission text box in Google Classroom and turn it in. Your tutor will be notified immediately to review your work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Vanilla JS for interactivity -->
+  <script>
+    // Roles data (from your React version)
+    const roles = [
+      {
+        id: 'business',
+        title: 'Business Leader / Manager',
+        icon: 'briefcase',
+        description: 'Applying "Disclosing Systems" to organizational leadership.',
+        application:
+          'Instead of viewing a company as a machine and employees as cogs (what the podcast calls the "Machine Age" view), a business leader acts as a "discloser." By asking the three naming questions—"What is this? How does it work? How do I care for it?"—a leader stops treating a team purely as "lumber" (an economic abstraction) and starts treating it as an "ecosystem."',
+        quote:
+          '"We isolate the economic aspect of a business decision... pure profit maximization, and we ignore the social or ethical aspects... and we end up killing the community just like we killed the rose."'
+      },
+      {
+        id: 'engineer',
+        title: 'Software Engineer / Architect',
+        icon: 'code',
+        description: 'Understanding constraints as the foundation of true design.',
+        application:
+          'Engineers often operate in the realm of high abstraction, isolating variables to solve logical problems. However, the podcast notes that true innovation (like the Wright brothers inventing the airplane) comes from "obeying" the laws of reality rather than ignoring them. An engineer applying integrated thinking considers not just the pure logic of the code, but the human, social, and aesthetic impact of the software on the end-user.',
+        quote:
+          '"Did the Wright brothers conquer gravity by ignoring it? No... Nature is only conquered by obedience. ...It was man unlocking or disclosing the hidden potential of the physical world by following its rules."'
+      },
+      {
+        id: 'educator',
+        title: 'Teacher / Educator',
+        icon: 'graduation',
+        description: 'Moving from a test-tube environment to holistic cultivation.',
+        application:
+          'In education, it is tempting to use the scientific method\'s "tunnel vision" to reduce a student to a single metric, like a test score. The podcast argues that "everyday thinking"—like pruning a rose—is actually a higher, more integrated form of intelligence. A teacher must weave together the cognitive, social, and emotional aspects of a student simultaneously, respecting the "grain" of the child\'s development rather than imposing arbitrary force.',
+        quote:
+          '"If you get so obsessed with the physical sensation of cutting... that you forget the biotic reality that the plant is alive... You kill the rose."'
+      }
+    ];
+
+    // Simple icon renderer (inline SVG snippets)
+    function getRoleIconSvg(kind, isActive) {
+      const colorClass = isActive ? 'text-indigo-600' : 'text-slate-500';
+      if (kind === 'briefcase') {
+        return `
+          <svg class="w-6 h-6 mb-2 ${colorClass}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+            <path d="M12 12v4"></path>
+          </svg>
+        `;
+      }
+      if (kind === 'code') {
+        return `
+          <svg class="w-6 h-6 mb-2 ${colorClass}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        `;
+      }
+      // graduation cap
+      return `
+        <svg class="w-6 h-6 mb-2 ${colorClass}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 10L12 2 2 10l10 8 10-8Z" />
+          <path d="M6 12v5c3 1.5 9 1.5 12 0v-5" />
+        </svg>
+      `;
+    }
+
+    // Render role cards
+    const roleCardsContainer = document.getElementById('roleCards');
+    const roleDetailContainer = document.getElementById('roleDetailContainer');
+    const roleDetail = document.getElementById('roleDetail');
+    let activeRoleId = null;
+
+    function renderRoleCards() {
+      roleCardsContainer.innerHTML = '';
+      roles.forEach((role) => {
+        const isActive = role.id === activeRoleId;
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className =
+          'p-5 rounded-xl border-2 text-left transition-all duration-200 flex flex-col items-center text-center text-sm md:text-base ' +
+          (isActive
+            ? 'border-indigo-600 bg-indigo-50 text-indigo-900 shadow-md -translate-y-1'
+            : 'border-slate-200 bg-white hover:border-indigo-300 hover:bg-slate-50');
+
+        card.innerHTML = `
+          <div class="${isActive ? 'text-indigo-600' : 'text-slate-500'}">
+            ${getRoleIconSvg(role.icon, isActive)}
+          </div>
+          <h3 class="font-bold text-base md:text-lg mb-2">${role.title}</h3>
+          <p class="text-xs md:text-sm text-slate-500">${role.description}</p>
+        `;
+
+        card.addEventListener('click', () => {
+          activeRoleId = role.id;
+          updateRoleDetail();
+          renderRoleCards();
+        });
+
+        roleCardsContainer.appendChild(card);
+      });
+    }
+
+    function updateRoleDetail() {
+      if (!activeRoleId) {
+        roleDetailContainer.classList.add('hidden');
+        return;
+      }
+      const role = roles.find((r) => r.id === activeRoleId);
+      if (!role) return;
+
+      roleDetail.innerHTML = `
+        <h3 class="text-lg md:text-2xl font-bold mb-4 flex items-center gap-3">
+          ${getRoleIconSvg(role.icon, true)}
+          <span>${role.title} Application</span>
+        </h3>
+        <p class="text-sm md:text-lg leading-relaxed mb-6 text-indigo-100">
+          ${role.application}
+        </p>
+        <blockquote class="bg-indigo-800 border-l-4 border-indigo-400 p-4 rounded-r-lg italic text-indigo-200 text-sm md:text-base">
+          <svg class="w-4 h-4 inline mr-2 text-indigo-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 18h6"></path>
+            <path d="M10 22h4"></path>
+            <path d="M12 2a7 7 0 0 0-4 12.75V17h8v-2.25A7 7 0 0 0 12 2Z"></path>
+          </svg>
+          ${role.quote}
+        </blockquote>
+      `;
+      roleDetailContainer.classList.remove('hidden');
+    }
+
+    renderRoleCards();
+    updateRoleDetail();
+
+    // Clipboard + hints logic
+    const reflectionText = document.getElementById('reflectionText');
+    const copyButton = document.getElementById('copyButton');
+    const copyStatus = document.getElementById('copyStatus');
+    const hintsPanel = document.getElementById('hintsPanel');
+    const toggleHints = document.getElementById('toggleHints');
+
+    let statusTimeout = null;
+
+    copyButton.addEventListener('click', () => {
+      const text = reflectionText.value.trim();
+      if (!text) {
+        copyStatus.textContent = 'Please write your reflection first!';
+        copyStatus.classList.remove('text-green-600');
+        copyStatus.classList.add('text-red-500');
+        if (statusTimeout) clearTimeout(statusTimeout);
+        statusTimeout = setTimeout(() => (copyStatus.textContent = ''), 3000);
+        return;
+      }
+
+      navigator.clipboard
+        .writeText(text)
+        .then(() => {
+          copyStatus.textContent = 'Copied to clipboard!';
+          copyStatus.classList.remove('text-red-500');
+          copyStatus.classList.add('text-green-600');
+          if (statusTimeout) clearTimeout(statusTimeout);
+          statusTimeout = setTimeout(() => (copyStatus.textContent = ''), 3000);
+        })
+        .catch(() => {
+          copyStatus.textContent = 'Unable to copy. Please copy manually.';
+          copyStatus.classList.remove('text-green-600');
+          copyStatus.classList.add('text-red-500');
+          if (statusTimeout) clearTimeout(statusTimeout);
+          statusTimeout = setTimeout(() => (copyStatus.textContent = ''), 4000);
+        });
+    });
+
+    let hintsVisible = false;
+    toggleHints.addEventListener('click', () => {
+      hintsVisible = !hintsVisible;
+      hintsPanel.classList.toggle('hidden', !hintsVisible);
+      toggleHints.querySelector('span').textContent = hintsVisible
+        ? 'Hide Suggestions'
+        : 'Stuck? View Model Answers';
+    });
+  </script>
+</body>
+</html>
